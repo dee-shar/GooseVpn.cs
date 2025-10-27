@@ -1,4 +1,3 @@
-using System;
 using System.Net.Http;
 using System.Text.Json;
 using System.Net.Http.Json;
@@ -31,7 +30,8 @@ namespace GooseVpnApi
             var response = await httpClient.PostAsync($"{apiUrl}/in_app/signup", data);
             var content = await response.Content.ReadAsStringAsync();
             using var document = JsonDocument.Parse(content);
-            if (document.RootElement.TryGetProperty("token", out var tokenElement)) {
+            if (document.RootElement.TryGetProperty("token", out var tokenElement))
+            {
                 token = tokenElement.GetString();
                 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
             }
