@@ -3,7 +3,6 @@ Mobile-API for [GOOSE VPN](https://play.google.com/store/apps/details?id=com.goo
 
 ## Example
 ```cs
-using System;
 using GooseVpnApi;
 
 namespace Application
