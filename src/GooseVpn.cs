@@ -43,11 +43,13 @@ namespace GooseVpnApi
             var response = await httpClient.GetAsync($"{apiUrl}/users/me/plan");
             return await response.Content.ReadAsStringAsync();
         }
+        
         public async Task<string> GetAccountInfo()
         {
             var response = await httpClient.GetAsync($"{apiUrl}/users/me");
             return await response.Content.ReadAsStringAsync();
         }
+        
         public async Task<string> GetServers()
         {
             var response = await httpClient.GetAsync($"{apiUrl}/users/me/servers");
