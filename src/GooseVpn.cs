@@ -14,7 +14,7 @@ namespace GooseVpnApi
         public GooseVpn()
         {
             httpClient = new HttpClient();
-            httpClient.DefaultRequestHeaders.TryAddWithoutValidation("User-Agent", "okhttp/4.9.0");
+            httpClient.DefaultRequestHeaders.Add("User-Agent", "okhttp/4.9.0");
             httpClient.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
         }
